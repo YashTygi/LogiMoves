@@ -1,38 +1,10 @@
-.godown_list{
-    width: 99%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 1rem;
 
 
-
-    margin: 2rem 1.2rem;
-}
-
-.godown_card{
-    width: 80%;
-    border-radius: 20px;
-    background-color: #d9d9d9;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1rem 2rem;
-    font-family: var(--source);
-}
-.godown_card h1{
-    color: #3e2723;
-    text-align: start;
-}
-.godown_card p{
-    color: #8d6e63;
-}
 .godown_card ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
     text-decoration: none;
     list-style: none;
 }
@@ -46,8 +18,54 @@
     transition: all 200ms ease-in-out;
 }
 
-.godown_card_content div{
+.godown-btn{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
+.godown-btn button {
+  background-color: #8d6e63;
+  width: 40%;
+  color: #fff;
+}
+
+
+
+.godown_list {
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 2rem;
+  width: 100%;
+  margin: 4rem 3rem 1.5rem 3rem;
+  }
+  
+  .godown_card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--source);
+    background-color: #d9d9d9;
+  }
+  
+  .godown_card h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3e2723;
+    text-align: start;
+  }
+  
+  .godown_card p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #8d6e63;
+  }
+  
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    list-style: none;
+    padding: 0;
+  }

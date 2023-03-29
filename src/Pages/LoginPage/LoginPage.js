@@ -1,11 +1,13 @@
 import React from 'react'
 import "./LoginPage.css"
 import { Link } from 'react-router-dom'
+import {Blob} from '../../assets'
 
 const LoginPage = () => {
   return (
     <div>
-    <Link className='Return' to="/"> Home Page</Link>
+    <Link className='Return' to="/">Back to Home Page</Link>
+    <Blob className="blob" />
     <div className='sign-in-container'>
     <form className='form'>
     <div className='sign-in-form'>

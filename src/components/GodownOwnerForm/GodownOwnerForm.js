@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import "./GodownOwnerForm.css";
 
+
 function GodownOwnerForm() {
   const initialValues = { username: "", email: "", Address: "", Number: "" };
   const [formValues, setFormValues] = useState(initialValues);
@@ -39,6 +40,23 @@ function GodownOwnerForm() {
     return errors;
   };
 
+  const postData = async(e) => {
+    e.preventDefault();
+    const{name, email, address, Number} = initialValues;
+
+    const res = await fetch("https://warehousedb-74728-default-rtdb.firebaseio.com/warehouse.json", {
+      method: 'POST',
+      headers: {
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify({
+        name,
+        email,
+        address, 
+      })
+    })
+  }
+
   return (
     <div className="container">
       
@@ -51,8 +69,8 @@ function GodownOwnerForm() {
             <label>Name</label>
             <input
               type="text"
-              name="username"
-              placeholder="Username"
+              name="name"
+              placeholder="Name"
               value={formValues.username}
               onChange={handleChange}
             />
@@ -73,31 +91,22 @@ function GodownOwnerForm() {
             <label>Office Address</label>
             <input
               type="Address"
-              name="Address"
+              name="address"
               placeholder="Address"
               value={formValues.Address}
               onChange={handleChange}
             />
           </div>
           <p>{formErrors.Address}</p>
-          <div className="field">
-            <label>Phone Number</label>
-            <input
-              type="Number"
-              name="Number"
-              placeholder="Phone Number"
-              value={formValues.Number}
-              onChange={handleChange}
-            />
-          </div>
+          
           <p>{formErrors.Number}</p>
           <div className="field pdf">
-            <label>Proof Of OwnerShip</label>
+            <label>Proof Of Identity</label>
             <input
               type="file"
               accept="pdf"
-              name="ownership"
-              placeholder="Proof Of OwnerShip"
+              name="proofOfId"
+              placeholder="Proof Of Identity"
               value={formValues.ownership}
               onChange={handleChange}
               required
@@ -108,26 +117,15 @@ function GodownOwnerForm() {
             <input
               type="file"
               accept="pdf"
-              name="license"
+              name="warehouseId"
               placeholder="Proof Of OwnerShip"
               value={formValues.license}
               onChange={handleChange}
               required
             />
           </div>
-          <div className="field pdf">
-            <label>Address Proof</label>
-            <input
-              type="file"
-              accept="pdf"
-              name="addressproof"
-              placeholder="Proof Of Address"
-              value={formValues.addressproof}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <button className="fluid ui button blue">Submit</button>
+          
+          <button onClick={postData} className="fluid ui button blue">Submit</button>
         </div>
       </form>
     </div>
@@ -135,3 +133,54 @@ function GodownOwnerForm() {
 }
 
 export default GodownOwnerForm;
+
+
+// import React from 'react'
+// import { useState } from 'react'
+// import {database} from '../../Firebase.js'
+// function FirebaseDemo() {
+
+//     const [details, setDetails] = useState({
+//         name: '',
+//         address: '',
+//         email: '',
+       
+//     })
+
+//     const PostData =async(e)=>{
+//         e.preventDefault()
+
+//         const{name,address,email}=details;
+
+//        const res=await fetch("https://warehousedb-74728-default-rtdb.firebaseio.com/warehouse.json",
+//        {
+//            method:'POST',
+//            headers:{
+//                'Content-Type':'application/json'
+//            },
+//            body:JSON.stringify({
+//             name,
+//             address,
+//             email,
+           
+//            })
+//         })
+
+//     }
+
+//   return (
+//     <div className='form' >
+//         <input type='text' placeholder='Enter your first name' onChange={(e)=>
+//             setDetails({...details,fName:e.target.value})} />
+//         <input type='text' placeholder='Enter your last name' onChange={(e)=>
+//             setDetails({...details,lName:e.target.value})}  />
+//         <input type='email' placeholder='Enter your Email address' onChange={(e)=>
+//             setDetails({...details,email:e.target.value})} />
+//         <button onClick={PostData}>Submit</button>
+//     </div>
+//   )
+// }
+
+// export default FirebaseDemo
+
+

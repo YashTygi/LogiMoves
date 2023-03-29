@@ -1,31 +1,31 @@
 import React from 'react'
 import './About.css'
 import {default as warehouse} from '../../assets/warehouse.png'
+import {default as warehouse1} from '../../assets/warehouse1.png'
+import {default as truck2} from '../../assets/truck2.png'
+
 
 const AboutUs = () => {
   return (
     <div className='about_container'>
-    <h1>Who we are?</h1>
-     <div className='about_content'>
-       <img src={warehouse} alt="Warehouse" />
-      <p>We are a logistic platform connecting exporters and warehouse owners. Our goal is to make the process 
-      of exporting goods as seamless and efficient as possible. By connecting exporters with warehouse owners, 
-      we provide a one-stop solution for all logistics needs. Our platform allows exporters to book warehouse 
-      space, track their shipments, and manage their inventory all in one place.
+    <div className="about_img">
+    <div className="top">
+    <img src={warehouse} alt="Image 1" />
+  </div>
+  <div className="middle">
+    <img src={warehouse1} alt="Image 2" />
+  </div>
+  <div className="bottom">
+    <img src={truck2} alt="Image 3" />
+  </div>
+    </div>
+    <div className='about_content'>
+    <h1>About Us</h1>
+      <p>Our platform is designed to make the process of exporting goods as smooth and effortless as possible. We understand that logistics can be a complex and time-consuming process, and that's why we have created a one-stop solution to simplify the entire process.
       <br />
-      Our platform allows exporters to easily find and book warehouses, saving them time and effort. We only work with
-       reputable warehouse owners who have been vetted for quality and safety.We offer a secure online payment
-        system, so exporters can book warehouses with confidence.
+      We work only with vetted warehouse owners who meet our quality and safety standards, so you can have peace of mind knowing that your goods are in good hands. Our platform provides exporters with the flexibility to choose the warehouse that suits their product features, and the convenience of managing their inventory and tracking their shipments all in one place.
       <br/>
-       We believe that by streamlining the logistics process, we can help businesses grow and succeed on a 
-       global scale. Be worry free about your logistics, choose warehouse according to your product features
-       and get it delivered with much less delay. Our user-friendly interface makes it easy for exporters
-       to quickly find and book the warehouse space they need, and our real-time tracking feature ensures that 
-       you always know where your goods are.
-       <br />
-       Say goodbye to the hassle of coordinating multiple logistics providers
-       and hello to a streamlined, stress-free exporting experience. Sign up with us today and take control of your
-       logistics!</p>
+      So if you are looking for a reliable and efficient logistics platform that can help you manage your shipments, inventory, and warehouse needs all in one place, look no further. Sign up with us today and experience the ease and convenience of our platform.</p>
      </div>
     </div>
   )
