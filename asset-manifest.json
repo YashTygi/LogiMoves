@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.60864458.css",
+    "main.js": "/static/js/main.2fef2c19.js",
+    "static/media/exporter.jpg": "/static/media/exporter.98b2db5aeb498f9709b6.jpg",
+    "static/media/containerwarehouse.jpg": "/static/media/containerwarehouse.6a30098ba117243b5930.jpg",
+    "static/media/owner.jpg": "/static/media/owner.e4dcd77bc86c8d853eb9.jpg",
+    "static/media/truck2.png": "/static/media/truck2.864a3edcb1ae0fa2071c.png",
+    "static/media/truck.png": "/static/media/truck.0d9e61631914582bc2f7.png",
+    "static/media/warehouse3.png": "/static/media/warehouse3.e36c7ad9d097363bbf03.png",
+    "static/media/warehouse1.png": "/static/media/warehouse1.1fefdc77d9ac820c18fe.png",
+    "static/media/warehouse.png": "/static/media/warehouse.362d1629be9c7c7aed66.png",
+    "static/media/logo.png": "/static/media/logo.1e8313e622d3577b0d7d.png",
+    "index.html": "/index.html",
+    "main.60864458.css.map": "/static/css/main.60864458.css.map",
+    "main.2fef2c19.js.map": "/static/js/main.2fef2c19.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60864458.css",
+    "static/js/main.2fef2c19.js"
+  ]
+}
